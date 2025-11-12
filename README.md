@@ -2,14 +2,13 @@
 A command-line tool that processes cookie log files and identifies the most active cookie(s) for a specified date.
 
 ## Overview
-This application analyzes cookie activity logs to determine which cookie(s) appeared most frequently on a given day. It's built with extensibility in mind using the Template Method design pattern, making it easy to support additional file formats in the future.
+This application analyzes cookie activity logs to determine which cookie(s) appeared most frequently on a given day. 
 
 ## Features
 
 CSV Log Processing: Parses cookie log files in CSV format
 Date-Based Analysis: Finds the most active cookie(s) for any specified date
 Multiple Results: Returns all cookies that tie for the highest activity count
-Extensible Architecture: Template Method pattern allows easy addition of new file format handlers (JSON, XML, etc.)
 
 ## Installation
 
@@ -55,7 +54,7 @@ SAZuXPGUrfbcn5UA,2018-12-08T22:03:00+00:00
 ```
 Run the command:
 ```
-bash./most_active_cookie.js -f cookie_log.csv -d 2018-12-09
+./most_active_cookie.js -f cookie_log.csv -d 2018-12-09
 ```
 Output:
 ```
@@ -64,7 +63,7 @@ AtY0laUfhglK3lC7
 ### Multiple Results
 If multiple cookies have the same highest frequency, all will be returned:
 ```
-bash./most_active_cookie.js -f cookie_log.csv -d 2018-12-08
+./most_active_cookie.js -f cookie_log.csv -d 2018-12-08
 ```
 Output (if both appeared once):
 
